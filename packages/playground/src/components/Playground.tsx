@@ -1,17 +1,17 @@
 import { ComponentType, FormEvent, useCallback, useEffect, useRef, useState } from 'react';
-import { FormProps, IChangeEvent, withTheme } from '@rjsf/core';
 import { ErrorSchema, RJSFSchema, RJSFValidationError, UiSchema, ValidatorType } from '@rjsf/utils';
-import base64 from '../utils/base64';
-
-import { samples } from '../samples';
+import { FormProps, IChangeEvent, withTheme } from '@rjsf/core';
 import Header, { LiveSettings } from './Header';
+
 import DemoFrame from './DemoFrame';
+import Editors from './Editors';
 import ErrorBoundary from './ErrorBoundary';
 import GeoPosition from './GeoPosition';
-import { ThemesType } from './ThemeSelector';
-import Editors from './Editors';
-import SpecialInput from './SpecialInput';
 import { Sample } from '../samples/Sample';
+import SpecialInput from './SpecialInput';
+import { ThemesType } from './ThemeSelector';
+import base64 from '../utils/base64';
+import { samples } from '../samples';
 
 export interface PlaygroundProps {
   themes: { [themeName: string]: ThemesType };
@@ -130,6 +130,10 @@ export default function Playground({ themes, validators }: PlaygroundProps) {
 
   return (
     <>
+      {/* TODO:新增一个当前的jsoneditor编辑器 */}
+      <div>
+        <span>test</span>
+      </div>
       <Header
         schema={schema}
         uiSchema={uiSchema}
